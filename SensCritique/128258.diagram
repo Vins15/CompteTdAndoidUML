@@ -1,0 +1,70 @@
+format 215
+
+classcanvas 128002 class_ref 128514 // utilisateur
+  simpleclassdiagramsettings end
+  xyz 55 107 2000
+end
+classcanvas 128130 class_ref 128642 // administrateur
+  simpleclassdiagramsettings end
+  xyz 30 391 2000
+end
+usecasecanvas 128258 usecase_ref 128002 // inscrire
+  xyzwh 158 214 3005 64 32 label_xy 174 222
+end
+usecasecanvas 128386 usecase_ref 128130 // noter
+  xyzwh 354 193 3005 64 32 label_xy 378 201
+end
+usecasecanvas 128514 usecase_ref 128258 // mettreAvis
+  xyzwh 307 127 3005 85 41 label_xy 322 138
+end
+usecasecanvas 128642 usecase_ref 128386 // mettreFilm
+  xyzwh 349 362 3005 85 39 label_xy 366 377
+end
+subject 128770 "SensCritique chez utilisateur"
+  xyzwh 156 53 2000 424 220
+usecasecanvas 128898 usecase_ref 128514 // rechercher
+  xyzwh 301 89 3005 81 33 label_xy 307 99
+end
+usecasecanvas 130306 usecase_ref 128642 // gererLesInscris
+  xyzwh 328 414 3005 97 59 label_xy 339 434
+end
+subject 131074 "Syteme"
+  xyzwh 223 313 2000 325 185
+classcanvas 131202 class_ref 128386 // ApplicationSensCritique
+  simpleclassdiagramsettings end
+  xyz 675 218 2000
+end
+simplerelationcanvas 129666 simplerelation_ref 128258
+  from ref 128514 z 3006 stereotype "<<include>>" xyz 232 190 3000 to ref 128258
+end
+simplerelationcanvas 129794 simplerelation_ref 128386
+  from ref 128386 z 3006 stereotype "<<include>>" xyz 258 217 3000 to ref 128258
+end
+line 129922 ----
+  from ref 128002 z 3006 to ref 128898
+line 130050 ----
+  from ref 128002 z 3006 to ref 128514
+line 130178 ----
+  from ref 128002 z 3006 to ref 128386
+line 130434 ----
+  from ref 128130 z 3006 to ref 128642
+line 130562 ----
+  from ref 128130 z 3006 to ref 130306
+simplerelationcanvas 130690 simplerelation_ref 128130
+  from ref 128514 z 3006 to ref 128258
+end
+simplerelationcanvas 130818 simplerelation_ref 128002
+  from ref 128386 z 3006 to ref 128258
+end
+line 131714 ----
+  from ref 128898 z 3006 to ref 131202
+line 131842 ----
+  from ref 128386 z 3006 to point 546 225
+  line 131970 z 3006 to ref 131202
+line 132226 ----
+  from ref 128642 z 3006 to ref 131202
+line 132354 ---- decenter_begin 893
+  from ref 130306 z 3006 to ref 131202
+line 133634 ----
+  from ref 128514 z 3006 to ref 131202
+end

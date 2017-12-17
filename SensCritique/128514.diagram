@@ -1,0 +1,134 @@
+format 215
+
+classinstance 128002 class_ref 128514 // utilisateur
+  name ""   xyz 96 5 2000 life_line_z 2000
+classinstance 128130 class_ref 128642 // administrateur
+  name ""   xyz 725 11 2000 life_line_z 2000
+classinstance 128258 class_ref 128386 // ApplicationSensCritique
+  name ""   xyz 428 4 2000 life_line_z 2000
+fragment 130178 "opt"
+  form "belong to inscris" xyzwh 187 178 3005 247 118
+  separator 5000
+end
+note 130306 "a condition d'etre inscris
+"
+  xyzwh 325 178 2000 107 49
+fragment 132098 "loop"
+  xyzwh 545 120 2030 167 76
+end
+durationcanvas 128770 classinstance_ref 128002 // :utilisateur
+  xyzwh 117 78 2010 11 40
+end
+durationcanvas 128898 classinstance_ref 128258 // :ApplicationSensCritique
+  xyzwh 487 78 2010 11 25
+end
+durationcanvas 129154 classinstance_ref 128258 // :ApplicationSensCritique
+  xyzwh 487 140 2010 11 43
+  overlappingdurationcanvas 131842
+    xyzwh 493 152 2020 11 25
+  end
+end
+durationcanvas 129282 classinstance_ref 128002 // :utilisateur
+  xyzwh 117 143 2010 11 26
+end
+durationcanvas 129538 classinstance_ref 128002 // :utilisateur
+  xyzwh 117 225 2010 11 40
+end
+durationcanvas 129666 classinstance_ref 128258 // :ApplicationSensCritique
+  xyzwh 487 225 2010 11 58
+  overlappingdurationcanvas 129922
+    xyzwh 493 252 2020 11 25
+  end
+end
+durationcanvas 130434 classinstance_ref 128258 // :ApplicationSensCritique
+  xyzwh 487 331 2010 11 40
+end
+durationcanvas 130562 classinstance_ref 128002 // :utilisateur
+  xyzwh 117 326 2010 11 27
+end
+durationcanvas 130818 classinstance_ref 128258 // :ApplicationSensCritique
+  xyzwh 487 399 2010 11 40
+end
+durationcanvas 130946 classinstance_ref 128002 // :utilisateur
+  xyzwh 117 399 2010 11 25
+end
+durationcanvas 131202 classinstance_ref 128130 // :administrateur
+  xyzwh 757 91 2010 11 59
+  overlappingdurationcanvas 132482
+    xyzwh 763 117 2020 11 25
+  end
+end
+durationcanvas 131458 classinstance_ref 128130 // :administrateur
+  xyzwh 757 230 2010 11 64
+  overlappingdurationcanvas 132226
+    xyzwh 763 255 2020 11 25
+  end
+end
+durationcanvas 131714 classinstance_ref 128130 // :administrateur
+  xyzwh 757 152 2010 11 40
+end
+msg 129026 synchronous
+  from durationcanvas_ref 128770
+  to durationcanvas_ref 128898
+  yz 78 2015 explicitmsg "1:rechercher"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 252 64
+msg 129410 return
+  from durationcanvas_ref 129154
+  to durationcanvas_ref 129282
+  yz 143 2015 explicitmsg "1.2:resultatDeRecherche"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 223 129
+msg 129794 synchronous
+  from durationcanvas_ref 129538
+  to durationcanvas_ref 129666
+  yz 225 2015 explicitmsg "2:noter"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 271 211
+msg 130050 synchronous
+  from durationcanvas_ref 129538
+  to durationcanvas_ref 129922
+  yz 252 2025 explicitmsg "3:mettreUnAvis"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 253 238
+msg 130690 return
+  from durationcanvas_ref 130434
+  to durationcanvas_ref 130562
+  yz 334 2015 explicitmsg "2.2 affichageDeLaNote"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 230 320
+msg 131074 return
+  from durationcanvas_ref 130818
+  to durationcanvas_ref 130946
+  yz 399 2015 explicitmsg "3.2 avisPublie"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 274 385
+msg 131330 synchronous
+  from durationcanvas_ref 128898
+  to durationcanvas_ref 131202
+  yz 91 2015 explicitmsg "1.1: getRechercher(film)"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 554 77
+msg 131586 synchronous
+  from durationcanvas_ref 129666
+  to durationcanvas_ref 131458
+  yz 230 2025 explicitmsg "gestionInscription"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 562 216
+msg 131970 synchronous
+  from durationcanvas_ref 131714
+  to durationcanvas_ref 131842
+  yz 152 2025 explicitmsg "mettreUnfilm"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 601 138
+reflexivemsg 132354 synchronous
+  to durationcanvas_ref 132226
+  yz 255 2025 explicitmsg "validateInscris"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 749 241
+reflexivemsg 132610 synchronous
+  to durationcanvas_ref 132482
+  yz 117 2025 explicitmsg "validateRecherche"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 738 103
+end

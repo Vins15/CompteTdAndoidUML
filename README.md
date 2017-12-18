@@ -2,8 +2,9 @@
 
 Partie UML
 TD1 De l'énoncé 2016-2017
-carnet de bord
-cahier de scénario
+
+-carnet de bord
+-cahier de scénario
 
 Partie Android
 Tp1:

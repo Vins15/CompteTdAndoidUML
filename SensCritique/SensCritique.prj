@@ -1,7 +1,7 @@
 format 215
 "SensCritique"
-  revision 2
-  modified_by 2 "Vincent"
+  revision 3
+  modified_by 2 "tv301899"
 
 
   
@@ -40,6 +40,8 @@ format 215
 
   mark_for_import
   
+  ncouples 1
+  key "html dir" value "C:\\Users\\tv301899\\Downloads\\CompteTdAndoidUML-master\\CompteTdAndoidUML-master\\SensCritique/"
   classview 128002 "Clsens"
     
     classdiagramsettings show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context namespace show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers yes member_max_width 0 show_parameter_dir yes show_parameter_name yes package_name_in_tab yes show_context_mode namespace auto_label_position yes show_relation_modifiers yes show_relation_visibility yes show_infonote yes show_stereotype_properties yes end

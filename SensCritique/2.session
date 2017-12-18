@@ -1,11 +1,8 @@
-window_sizes 1920 1017 450 1465 867 104
+window_sizes 1800 910 450 1345 760 104
 
-diagrams
-  active  classdiagram_ref 128002 // DCsens
-    1451 827 100 A4 0 0
-end
 show_stereotypes
-selected usecasediagram_ref 128258 // USDsens
+selected 
+  package_ref 129 // SensCritique
 open
   classview_ref 128002 // Clsens
   usecaseview_ref 128002 // UCsens
